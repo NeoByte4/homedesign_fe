@@ -6,12 +6,14 @@ import { furniture_product } from "@/src/data/furniture_product";
 import TopProductSection from "@/src/components/sections/top-product-section";
 import ProductCategorySection from "@/src/components/sections/product-category-section";
 import ProductListSection from "@/src/components/sections/product-list-section";
+import RotateProduct from "@/src/components/sections/rotate-product";
 
 function Page() {
   const hero = homepageData[0];
   const topProducts = furniture_product;
   const productCategories = furniture_product;
   const productlist = furniture_product;
+  const rotateProductData = furniture_product;
 
   return (
     <>
@@ -51,6 +53,25 @@ function Page() {
           />
         )}
       </SpacingLayout>
+      {shouldRenderSection(rotateProductData) && (
+        <RotateProduct
+          subtitle={rotateProductData[0].subtitle}
+          title={rotateProductData[0].name}
+          image={rotateProductData[0].images_url[0].url}
+          description={
+            <>
+              We are an Australian-owned travel wholesaler with over 20 years of
+              experience in Mediterranean travel. We create tailor-made
+              packages, from private tours and honeymoons to family holidays,
+              leisure getaways, and corporate trips.
+              <br />
+              <br />
+              Our services cover everything—accommodation, transfers, ferry and
+              train tickets, guided tours, and unique local experiences.
+            </>
+          }
+        />
+      )}
     </>
   );
 }

@@ -127,7 +127,8 @@ const ProductCard: React.FC<Props> = ({
           <Button
             type="button"
             aria-label={`Add ${name} to cart`}
-            className="w-full"
+            className="w-full mt-3"
+            variant={"default-blue"}
           >
             Add to Cart
             <ShoppingCart size={18} />
