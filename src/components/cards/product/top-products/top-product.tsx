@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import StyledButton from "../../ui/styled-button";
+
 import { ShoppingCart } from "lucide-react";
-import HeadingText from "../../ui/heading-text";
+import HeadingText from "@/src/components/ui/heading-text";
+import StyledButton from "@/src/components/ui/styled-button";
 
 interface Props {
   location: string;

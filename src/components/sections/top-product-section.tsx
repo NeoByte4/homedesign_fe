@@ -2,8 +2,8 @@
 import { Ifurniture_product } from "@/src/types/types";
 import ContainerLayout from "../layouts/container-layout";
 import TitleContentBlock from "../contents/title-content-block";
-import TopProductCard from "../cards/top-products/top-product";
 import { routes } from "@/src/lib/routes";
+import TopProductCard from "../cards/product/top-products/top-product";
 
 const spanPatterns = [
   "sm:col-span-2 lg:col-span-2",
