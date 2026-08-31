@@ -6,6 +6,7 @@ interface StyledButtonProps extends React.ComponentProps<"button"> {
   iconStyle?: string;
   variant?: "primary" | "secondary" | "icon";
   cartCount?: number;
+  showIcon?: boolean;
 }
 
 const StyledButton: React.FC<StyledButtonProps> = ({
@@ -14,6 +15,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({
   icon: Icon = ArrowUpRight,
   variant = "primary",
   cartCount = 0,
+  showIcon = true,
   ...props
 }) => {
   const isPrimary = variant === "primary";
@@ -23,7 +25,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({
 
   return (
     <button
-      className={`relative flex items-center font-semibold rounded-full gap-2 w-fit 
+      className={`relative flex items-center font-semibold rounded-full gap-2 w-fit
         transition-all duration-300 ease-in-out font-secondary cursor-pointer
         ${
           isPrimary
@@ -34,36 +36,38 @@ const StyledButton: React.FC<StyledButtonProps> = ({
                 ? "bg-transparent text-[#2D2E2C] border border-transparent hover:border-[#2D2E2C] hover:bg-gray-100"
                 : ""
         }
-        ${hasChildren ? "pl-4 pr-2 py-2" : "p-2"}
+        ${hasChildren && showIcon ? "pl-4 pr-2 py-2" : "p-2"}
       `}
       {...props}
     >
       {hasChildren && <span className="text-sm">{children}</span>}
 
-      <span
-        className={`relative flex items-center justify-center rounded-full w-6 h-6 ${
-          hasChildren ? "ml-2" : ""
-        } ${
-          isPrimary ? "bg-white" : isSecondary ? "bg-black" : "bg-transparent"
-        }`}
-      >
-        <Icon
-          className={`${
-            isPrimary
-              ? "text-black"
-              : isSecondary
-                ? "text-white"
-                : "text-[#2D2E2C]"
-          } ${iconStyle}`}
-          size={16}
-        />
+      {showIcon && (
+        <span
+          className={`relative flex items-center justify-center rounded-full w-6 h-6 ${
+            hasChildren ? "ml-2" : ""
+          } ${
+            isPrimary ? "bg-white" : isSecondary ? "bg-black" : "bg-transparent"
+          }`}
+        >
+          <Icon
+            className={`${
+              isPrimary
+                ? "text-black"
+                : isSecondary
+                  ? "text-white"
+                  : "text-[#2D2E2C]"
+            } ${iconStyle}`}
+            size={16}
+          />
 
-        {isIcon && (
-          <span className="absolute -top-2 -right-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
-            {cartCount}
-          </span>
-        )}
-      </span>
+          {isIcon && (
+            <span className="absolute -top-2 -right-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
+              {cartCount}
+            </span>
+          )}
+        </span>
+      )}
     </button>
   );
 };

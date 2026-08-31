@@ -1,5 +1,6 @@
 export const routes = {
   home: "/",
+  products: "/products",
   furniture: "/furniture",
   HomeDesign: "/home-design",
   CustomDesign: "/custom-design",
