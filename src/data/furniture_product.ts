@@ -4,8 +4,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "sofa-001",
     name: "Mid-Century Modern Sofa",
-    category: "Sofas",
+    category: ["Sofas", "Living Room", "Seating"],
     subtitle: "Elegant 3-seater with tapered legs",
+    rating: 4.5,
+    inclusion_icons: ["setup", "delivery", "servicing"],
     images_url: [
       {
         id: "img-sofa-001-1",
@@ -26,7 +28,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/mid-century-sofa.mp4",
       },
     ],
-    price_range: "$1,299 - $1,599",
+    price_range: "RS: 1,299 - 1,599",
     price: 1399,
     discount: 15,
 
@@ -214,8 +216,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "table-001",
     name: "Farmhouse Dining Table",
-    category: "Tables",
+    category: ["Tables"],
     subtitle: "Solid wood dining table with cross base",
+    inclusion_icons: ["setup", "delivery"],
+    rating: 4.7,
     images_url: [
       {
         id: "img-table-001-1",
@@ -236,7 +240,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/farmhouse-table.mp4",
       },
     ],
-    price_range: "$899 - $1,299",
+    price_range: "RS: 899 - 1,299",
     price: 999,
     discount: 10,
 
@@ -424,8 +428,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "bed-001",
     name: "Upholstered Platform Bed",
-    category: "Beds",
+    category: ["Beds"],
     subtitle: "Modern headboard with button tufting",
+    inclusion_icons: ["delivery", "servicing"],
+    rating: 4.6,
     images_url: [
       {
         id: "img-bed-001-1",
@@ -446,7 +452,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/platform-bed.mp4",
       },
     ],
-    price_range: "$1,499 - $2,199",
+    price_range: "RS: 1,499 - 2,199",
     price: 1799,
     discount: 12,
 
@@ -635,8 +641,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "chair-002",
     name: "Ergonomic Office Chair",
-    category: "Office Chairs",
+    category: ["Office Chairs"],
     subtitle: "Adjustable mesh back with lumbar support",
+    inclusion_icons: ["setup", "servicing"],
+    rating: 4.8,
     images_url: [
       {
         id: "img-chair-002-1",
@@ -657,7 +665,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/office-chair.mp4",
       },
     ],
-    price_range: "$349 - $499",
+    price_range: "RS: 349 - 499  ",
     price: 399,
     discount: 20,
 
@@ -850,8 +858,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "table-002",
     name: "Minimalist Coffee Table",
-    category: "Tables",
+    category: ["Tables"],
     subtitle: "Glass top with geometric metal base",
+    inclusion_icons: ["setup", "delivery", "servicing"],
+    rating: 4.4,
     images_url: [
       {
         id: "img-table-002-1",
@@ -872,7 +882,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/coffee-table.mp4",
       },
     ],
-    price_range: "$429 - $599",
+    price_range: "RS: 429 - 599",
     price: 479,
     discount: 8,
 
@@ -1060,8 +1070,10 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "shelf-001",
     name: "Mid-Century Modern Bookshelf",
-    category: "Shelves & Storage",
+    category: ["Shelves & Storage"],
     subtitle: "Five-tier wooden shelf with hairpin legs",
+    inclusion_icons: ["setup", "servicing"],
+    rating: 4.3,
     images_url: [
       {
         id: "img-shelf-001-1",
@@ -1082,7 +1094,7 @@ export const furniture_product: Ifurniture_product[] = [
         url: "/videos/products/bookshelf.mp4",
       },
     ],
-    price_range: "$299 - $399",
+    price_range: "RS: 299 - 399",
     price: 349,
     discount: 15,
 

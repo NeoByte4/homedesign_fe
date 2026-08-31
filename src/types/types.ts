@@ -17,10 +17,11 @@ export interface IHomePage {
 export interface Ifurniture_product {
   id: string;
   name: string;
-  category: string;
+  category: string[];
   subtitle: string;
   images_url: IImage[];
   video_url?: IVideo[];
+  rating?: number;
   price_range: string;
   discount?: number;
   price?: number;
@@ -28,4 +29,5 @@ export interface Ifurniture_product {
   fabric?: IFabric[];
   description_content?: TiptapDocument;
   dimensions?: ProductDimensions[];
+  inclusion_icons?: string[];
 }

@@ -5,11 +5,13 @@ import { shouldRenderSection } from "@/src/utils/should-render-section";
 import { furniture_product } from "@/src/data/furniture_product";
 import TopProductSection from "@/src/components/sections/top-product-section";
 import ProductCategorySection from "@/src/components/sections/product-category-section";
+import ProductListSection from "@/src/components/sections/product-list-section";
 
 function Page() {
   const hero = homepageData[0];
   const topProducts = furniture_product;
   const productCategories = furniture_product;
+  const productlist = furniture_product;
 
   return (
     <>
@@ -36,6 +38,16 @@ function Page() {
             title="Explore Our Collections"
             description="Discover thoughtfully designed furniture for every room, crafted to bring comfort, style, and character to your space. From timeless classics to modern statement pieces, explore our carefully selected collections made to complement your lifestyle and transform your home into a space you truly love."
             data={productCategories}
+          />
+        )}
+        {shouldRenderSection(productlist) && (
+          <ProductListSection
+            subtitle="Discover More"
+            title="Our Furniture Collection"
+            description="Explore our curated selection of furniture, designed to elevate your living spaces with style and functionality. From timeless classics to modern statement pieces, find the perfect addition to your home."
+            morePlansUrl="/products"
+            morePlansLabel="See More Products"
+            data={productlist}
           />
         )}
       </SpacingLayout>
