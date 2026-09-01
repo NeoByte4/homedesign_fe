@@ -56,8 +56,9 @@ const ProductCategorySection: React.FC<Props> = ({
           </CarouselContent>
           {data.length > 1 && (
             <>
-              <CarouselPrevious className="absolute left-2 bottom-1/2 -translate-y-1/2 z-10" />
-              <CarouselNext className="absolute right-2 bottom-1/2 -translate-y-1/2 z-10" />
+              <CarouselPrevious className="absolute left-2 bottom-1/2 -translate-y-1/2 z-10 size-8 [&_svg]:size-4" />
+
+              <CarouselNext className="absolute right-2 bottom-1/2 -translate-y-1/2 z-10 size-8 [&_svg]:size-4" />
             </>
           )}
         </Carousel>

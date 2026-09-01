@@ -21,13 +21,13 @@ const RotateProduct: React.FC<props> = ({
 }) => {
   return (
     <ContainerLayout className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div className="flex justify-center order-1 md:order-2">
+      <div className="rounded-xl overflow-hidden order-2 md:order-1">
         <Image
           alt="About Prestige"
           src={image}
           width={600}
-          height={600}
-          className="w-full max-w-[500px] h-auto rounded-xl object-cover"
+          height={438}
+          className="w-full h-[438px] object-cover"
         />
       </div>
 

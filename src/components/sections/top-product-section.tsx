@@ -20,12 +20,15 @@ interface Props {
   description: string;
   data: Ifurniture_product[];
 }
+
 const TopProductSection: React.FC<Props> = ({
   subtitle,
   title,
   description,
   data,
 }) => {
+  const products = data.slice(0, 6);
+
   return (
     <div>
       <ContainerLayout className="mb-8">
@@ -39,8 +42,11 @@ const TopProductSection: React.FC<Props> = ({
 
       <ContainerLayout className="bg-surface-1 p-4 rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 auto-rows-[340px]">
-          {data.map((product, i) => (
-            <div key={i} className={`w-full h-full ${spanPatterns[i]}`}>
+          {products.map((product, i) => (
+            <div
+              key={product.id}
+              className={`w-full h-full ${spanPatterns[i]}`}
+            >
               <TopProductCard
                 location={product.name}
                 image={product.images_url[0].url}

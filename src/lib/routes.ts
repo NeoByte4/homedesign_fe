@@ -7,4 +7,5 @@ export const routes = {
   AboutUs: "/about-us",
   contact: "/contact",
   signup: "/signup",
+  reviews: "/reviews",
 };

@@ -11,7 +11,7 @@ export const furniture_product: Ifurniture_product[] = [
     images_url: [
       {
         id: "img-sofa-001-1",
-        url: "/images/products/mid-century-sofa-1.webp",
+        url: "/images/Retreat-101(1+2+2).png",
       },
       {
         id: "img-sofa-001-2",
@@ -1278,5 +1278,740 @@ export const furniture_product: Ifurniture_product[] = [
         },
       },
     ],
+  },
+  //  only domeeeyyyy
+  {
+    id: "bed-001",
+    name: "Scandinavian Platform Bed",
+    category: ["Beds", "Bedroom", "Furniture"],
+    subtitle: "Minimalist queen bed with integrated storage",
+    rating: 4.8,
+    inclusion_icons: ["setup", "delivery", "servicing"],
+    images_url: [
+      {
+        id: "img-bed-001-1",
+        url: "/images/products/coffee-table-1.webp",
+      },
+      {
+        id: "img-bed-001-2",
+        url: "/images/beds/scandinavian-platform-2.webp",
+      },
+      {
+        id: "img-bed-001-3",
+        url: "/images/beds/scandinavian-platform-3.webp",
+      },
+    ],
+    video_url: [
+      {
+        id: "video-bed-001",
+        url: "/videos/beds/scandinavian-platform.mp4",
+      },
+    ],
+    price_range: "RS: 2,499 - 2,999",
+    price: 2699,
+    discount: 10,
+
+    color: [
+      {
+        id: "color-007",
+        name: "Natural Oak",
+        color_code: "#C19A6B",
+      },
+      {
+        id: "color-008",
+        name: "Walnut",
+        color_code: "#5C4033",
+      },
+      {
+        id: "color-009",
+        name: "White",
+        color_code: "#FFFFFF",
+      },
+    ],
+
+    description_content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Bring a touch of Scandinavian simplicity to your bedroom with this elegant platform bed.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "The sturdy wooden frame offers exceptional durability, while the clean lines and warm tones create a calming ambiance perfect for restful sleep.",
+            },
+          ],
+        },
+        {
+          type: "heading",
+          attrs: {
+            level: 3,
+          },
+          content: [
+            {
+              type: "text",
+              text: "Features",
+            },
+          ],
+        },
+        {
+          type: "bulletList",
+          content: [
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Solid wood construction with natural finish",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Built-in under-bed storage drawers",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Slatted base for mattress ventilation",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Requires no box spring",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    id: "table-001",
+    name: "Industrial Dining Table",
+    category: ["Tables", "Dining Room", "Seating"],
+    subtitle: "Rustic 6-seater with metal frame",
+    rating: 4.6,
+    inclusion_icons: ["delivery", "servicing"],
+    images_url: [
+      {
+        id: "img-table-001-1",
+        url: "/images/products/office-chair-1.webp",
+      },
+      {
+        id: "img-table-001-2",
+        url: "/images/tables/industrial-dining-2.webp",
+      },
+      {
+        id: "img-table-001-3",
+        url: "/images/tables/industrial-dining-3.webp",
+      },
+    ],
+    video_url: [
+      {
+        id: "video-table-001",
+        url: "/videos/tables/industrial-dining.mp4",
+      },
+    ],
+    price_range: "RS: 1,899 - 2,299",
+    price: 2099,
+    discount: 12,
+
+    color: [
+      {
+        id: "color-010",
+        name: "Rustic Brown",
+        color_code: "#8B4513",
+      },
+      {
+        id: "color-011",
+        name: "Charcoal Black",
+        color_code: "#36454F",
+      },
+      {
+        id: "color-012",
+        name: "Natural Wood",
+        color_code: "#DEB887",
+      },
+    ],
+
+    description_content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Make a bold statement with this industrial dining table that blends rustic charm with modern design.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "The solid wood top paired with a robust metal base ensures durability, while the spacious surface comfortably seats six for family gatherings.",
+            },
+          ],
+        },
+        {
+          type: "heading",
+          attrs: {
+            level: 3,
+          },
+          content: [
+            {
+              type: "text",
+              text: "Features",
+            },
+          ],
+        },
+        {
+          type: "bulletList",
+          content: [
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Thick solid wood top with natural grain",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Heavy-duty powder-coated metal frame",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Adjustable floor leveling feet",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Scratch-resistant protective finish",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    id: "desk-001",
+    name: "Minimalist Writing Desk",
+    category: ["Desks", "Home Office", "Storage"],
+    subtitle: "Compact workstation with floating shelves",
+    rating: 4.7,
+    inclusion_icons: ["setup", "delivery"],
+    images_url: [
+      {
+        id: "img-desk-001-1",
+        url: "/images/Retreat-101(1+2+2).png",
+      },
+      {
+        id: "img-desk-001-2",
+        url: "/images/desks/minimalist-desk-2.webp",
+      },
+      {
+        id: "img-desk-001-3",
+        url: "/images/desks/minimalist-desk-3.webp",
+      },
+    ],
+    video_url: [
+      {
+        id: "video-desk-001",
+        url: "/videos/desks/minimalist-desk.mp4",
+      },
+    ],
+    price_range: "RS: 1,099 - 1,399",
+    price: 1199,
+    discount: 15,
+
+    color: [
+      {
+        id: "color-013",
+        name: "Matte Black",
+        color_code: "#2C2C2C",
+      },
+      {
+        id: "color-014",
+        name: "Birch White",
+        color_code: "#F5F5DC",
+      },
+      {
+        id: "color-015",
+        name: "Graphite Gray",
+        color_code: "#6B6B6B",
+      },
+    ],
+
+    description_content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Create an inspiring workspace with this minimalist desk designed for modern homes and small offices.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "The sleek design features a spacious work surface, integrated cable management, and floating shelves that keep essentials within reach while maintaining a clean aesthetic.",
+            },
+          ],
+        },
+        {
+          type: "heading",
+          attrs: {
+            level: 3,
+          },
+          content: [
+            {
+              type: "text",
+              text: "Features",
+            },
+          ],
+        },
+        {
+          type: "bulletList",
+          content: [
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Engineered wood construction with durable coating",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Integrated shelf unit for storage and display",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Hidden cable tray for wire management",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Includes wall anchor for safety",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    id: "shelf-001",
+    name: "Modular Bookshelf",
+    category: ["Shelving", "Storage", "Living Room"],
+    subtitle: "Versatile 5-tier unit with adjustable shelves",
+    rating: 4.4,
+    inclusion_icons: ["delivery", "servicing"],
+    images_url: [
+      {
+        id: "img-shelf-001-1",
+        url: "/images/products/platform-bed-1.webp",
+      },
+      {
+        id: "img-shelf-001-2",
+        url: "/images/shelves/modular-bookshelf-2.webp",
+      },
+      {
+        id: "img-shelf-001-3",
+        url: "/images/shelves/modular-bookshelf-3.webp",
+      },
+    ],
+    video_url: [
+      {
+        id: "video-shelf-001",
+        url: "/videos/shelves/modular-bookshelf.mp4",
+      },
+    ],
+    price_range: "RS: 1,599 - 1,899",
+    price: 1699,
+    discount: 10,
+
+    color: [
+      {
+        id: "color-016",
+        name: "Espresso",
+        color_code: "#3E2723",
+      },
+      {
+        id: "color-017",
+        name: "Chalk White",
+        color_code: "#FDF5E6",
+      },
+      {
+        id: "color-018",
+        name: "Slate Gray",
+        color_code: "#708090",
+      },
+    ],
+
+    description_content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Transform any room with this modular bookshelf that offers endless organization possibilities.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Featuring five spacious tiers with adjustable shelves, this unit adapts to your storage needs—perfect for books, decor, and collectibles.",
+            },
+          ],
+        },
+        {
+          type: "heading",
+          attrs: {
+            level: 3,
+          },
+          content: [
+            {
+              type: "text",
+              text: "Features",
+            },
+          ],
+        },
+        {
+          type: "bulletList",
+          content: [
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "5-tier design with 4 adjustable shelves",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Sturdy construction with reinforced backing",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Wall attachment bracket for stability",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Versatile for living room, study, or bedroom",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    id: "chair-001",
+    name: "Ergonomic Office Chair",
+    category: ["Chairs", "Home Office", "Seating"],
+    subtitle: "Adjustable high-back with lumbar support",
+    rating: 4.9,
+    inclusion_icons: ["setup", "delivery", "servicing"],
+    images_url: [
+      {
+        id: "img-chair-001-1",
+        url: "/images/Retreat-101(1+2+2).png",
+      },
+      {
+        id: "img-chair-001-2",
+        url: "/images/chairs/ergonomic-chair-2.webp",
+      },
+      {
+        id: "img-chair-001-3",
+        url: "/images/chairs/ergonomic-chair-3.webp",
+      },
+    ],
+    video_url: [
+      {
+        id: "video-chair-001",
+        url: "/videos/chairs/ergonomic-chair.mp4",
+      },
+    ],
+    price_range: "RS: 1,799 - 2,199",
+    price: 1999,
+    discount: 18,
+
+    color: [
+      {
+        id: "color-019",
+        name: "Black",
+        color_code: "#1A1A1A",
+      },
+      {
+        id: "color-020",
+        name: "Gray",
+        color_code: "#A9A9A9",
+      },
+      {
+        id: "color-021",
+        name: "Burgundy",
+        color_code: "#800020",
+      },
+    ],
+
+    description_content: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Experience all-day comfort with this ergonomic office chair designed for long work sessions.",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            {
+              type: "text",
+              text: "Featuring adjustable lumbar support, breathable mesh backrest, and multi-directional armrests, this chair promotes healthy posture while reducing fatigue.",
+            },
+          ],
+        },
+        {
+          type: "heading",
+          attrs: {
+            level: 3,
+          },
+          content: [
+            {
+              type: "text",
+              text: "Features",
+            },
+          ],
+        },
+        {
+          type: "bulletList",
+          content: [
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Adjustable seat height and depth",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "360° swivel with smooth rolling casters",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Tilt-lock and tension control mechanism",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "listItem",
+              content: [
+                {
+                  type: "paragraph",
+                  content: [
+                    {
+                      type: "text",
+                      text: "Built-in lumbar support with adjustable height",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   },
 ];
