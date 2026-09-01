@@ -1,0 +1,16 @@
+services:
+  homedesign:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: homedesign_nextjs
+
+    ports:
+      - "3501:3500"
+
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    restart: unless-stopped
