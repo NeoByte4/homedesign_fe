@@ -10,6 +10,8 @@ import RotateProduct from "@/src/components/sections/rotate-product";
 import BrandShowcase from "@/src/components/sections/brand-showcase";
 import SiteReviewSection from "@/src/components/sections/reviews/site-reviews-seciton";
 import NewsletterSection from "@/src/components/sections/newsletter/newsletter-section";
+import GlobalProductSearch from "@/src/components/form/global-furniture-search";
+import { getProductSearchOptions } from "@/src/utils/get-product-search-options";
 
 function Page() {
   const hero = homepageData[0];
@@ -26,7 +28,9 @@ function Page() {
         subtitle={hero.subtitle}
         video_url={hero.video_url}
       >
-        <div className="absolute z-50 p-3 -translate-x-1/2 left-1/2 w-full -bottom-1/3 sm:bottom-0" />
+        <div className="absolute z-50 p-3 -translate-x-1/2 left-1/2 w-full -bottom-1/3 sm:bottom-0">
+          <GlobalProductSearch />
+        </div>
       </HeroSection>
       <div className="my-52 sm:my-16"></div>
       <SpacingLayout>

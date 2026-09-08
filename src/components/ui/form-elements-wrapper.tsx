@@ -19,7 +19,7 @@ const FormElementsWrapper = ({
     <div className="flex flex-col gap-1">
       {label && (
         <Label
-          className="text-xs uppercase text-text-hint font-secondary"
+          className="text-xs uppercase  text-text-hint font-secondary"
           htmlFor={name}
         >
           {required && <span className="text-primary-dark">*</span>}

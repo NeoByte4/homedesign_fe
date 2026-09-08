@@ -8,7 +8,7 @@ export const furniture_product: Ifurniture_product[] = [
     subtitle: "Elegant 3-seater with tapered legs",
     productType: "SOFA",
     rating: 4.5,
-    inclusion_icons: ["setup", "delivery", "servicing"],
+    inclusion_icons: ["Sectional Sofas"],
     images_url: [
       {
         id: "img-sofa-001-1",
@@ -217,7 +217,7 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "table-001",
     name: "Farmhouse Dining Table",
-    category: ["Tables"],
+    category: ["Dining Tables"],
     productType: "Table",
     subtitle: "Solid wood dining table with cross base",
     inclusion_icons: ["setup", "delivery"],
@@ -431,7 +431,7 @@ export const furniture_product: Ifurniture_product[] = [
     id: "bed-001",
     name: "Upholstered Platform Bed",
     productType: "Bed",
-    category: ["Beds"],
+    category: ["King Size Beds"],
     subtitle: "Modern headboard with button tufting",
     inclusion_icons: ["delivery", "servicing"],
     rating: 4.6,
@@ -644,7 +644,7 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "chair-002",
     name: "Ergonomic Office Chair",
-    category: ["Office Chairs"],
+    category: ["Dining Tables", "Office Tables", "Coffee Tables"],
     productType: "Chair",
     subtitle: "Adjustable mesh back with lumbar support",
     inclusion_icons: ["setup", "servicing"],
@@ -862,7 +862,7 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "table-002",
     name: "Minimalist Coffee Table",
-    category: ["Tables"],
+    category: ["Outdoor Tables", "Bar Tables", "Meeting Tables"],
     productType: "SOFA",
     subtitle: "Glass top with geometric metal base",
     inclusion_icons: ["setup", "delivery", "servicing"],
@@ -1075,7 +1075,11 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "shelf-001",
     name: "Mid-Century Modern Bookshelf",
-    category: ["Shelves & Storage"],
+    category: [
+      "Freestanding Bookshelves",
+      "Ladder Bookshelves",
+      "Corner Bookshelves",
+    ],
     productType: "Bookshelf",
     subtitle: "Five-tier wooden shelf with hairpin legs",
     inclusion_icons: ["setup", "servicing"],
@@ -1285,11 +1289,11 @@ export const furniture_product: Ifurniture_product[] = [
       },
     ],
   },
-  //  only domeeeyyyy
+
   {
     id: "bed-001",
     name: "Scandinavian Platform Bed",
-    category: ["Beds", "Bedroom", "Furniture"],
+    category: ["Panel Beds", "Storage Beds", "Canopy Beds"],
     productType: "Bed",
     subtitle: "Minimalist queen bed with integrated storage",
     rating: 4.8,
@@ -1437,7 +1441,7 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "table-001",
     name: "Industrial Dining Table",
-    category: ["Tables", "Dining Room", "Seating"],
+    category: ["Dining Tables"],
     productType: "Table",
     subtitle: "Rustic 6-seater with metal frame",
     rating: 4.6,
