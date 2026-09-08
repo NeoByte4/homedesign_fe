@@ -18,6 +18,7 @@ export interface Ifurniture_product {
   id: string;
   name: string;
   category: string[];
+  productType: string;
   subtitle: string;
   images_url: IImage[];
   video_url?: IVideo[];
