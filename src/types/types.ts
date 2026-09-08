@@ -7,12 +7,12 @@ import {
 } from "./generic";
 import { TiptapDocument } from "./tiptap";
 
-export interface IHomePage {
+export interface IBannerData {
   id: string;
-  title?: string;
-  subtitle?: string;
-  video_url?: IVideo;
-  image_url?: IImage[];
+  title: string;
+  subtitle: string;
+  video_url?: string;
+  image_url?: string;
 }
 export interface Ifurniture_product {
   id: string;

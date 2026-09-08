@@ -11,7 +11,6 @@ import BrandShowcase from "@/src/components/sections/brand-showcase";
 import SiteReviewSection from "@/src/components/sections/reviews/site-reviews-seciton";
 import NewsletterSection from "@/src/components/sections/newsletter/newsletter-section";
 import GlobalProductSearch from "@/src/components/form/global-furniture-search";
-import { getProductSearchOptions } from "@/src/utils/get-product-search-options";
 
 function Page() {
   const hero = homepageData[0];
