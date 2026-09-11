@@ -25,9 +25,7 @@ const NewsletterForm = ({ mode = "row" }: props) => {
     defaultValues,
   });
 
-  const onSubmit = async (formData: INewsletterSchema) => {
-    console.log("Form Data:", formData);
-  };
+  const onSubmit = async (formData: INewsletterSchema) => {};
 
   return (
     <form

@@ -14,6 +14,19 @@ export interface IBannerData {
   video_url?: string;
   image_url?: string;
 }
+export interface IFurnitureProductType {
+  id: string;
+  name: string;
+  slug: string;
+  subtitle?: string;
+  image_url?: IImage[];
+  is_active: boolean;
+  sort_order: number;
+  meta_title?: string;
+  meta_description?: string;
+  created_at: Date;
+  updated_at: Date;
+}
 export interface Ifurniture_product {
   id: string;
   name: string;
