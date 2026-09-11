@@ -1,5 +1,6 @@
 import {
   IFabric,
+  IFaq,
   IImage,
   IProduct_Color,
   IVideo,
@@ -26,12 +27,14 @@ export interface IFurnitureProductType {
   meta_description?: string;
   created_at: Date;
   updated_at: Date;
+  faq?: IFaq[];
 }
 export interface Ifurniture_product {
   id: string;
   name: string;
   category: string[];
   productType: string;
+  faqs?: IFaq[];
   subtitle: string;
   images_url: IImage[];
   video_url?: IVideo[];

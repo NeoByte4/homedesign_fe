@@ -68,3 +68,7 @@ export interface ProductDimensions {
     unit: "lb";
   };
 }
+export interface IFaq {
+  title: string;
+  description: string;
+}
