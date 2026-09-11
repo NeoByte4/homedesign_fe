@@ -24,7 +24,7 @@ export const navLinks: NavLink[] = [
 
   {
     name: "Furniture",
-    href: "/furniture",
+    href: routes.furniture,
 
     subPages: getUniqueValues(furniture_product, "productType").map(
       (productType) => ({

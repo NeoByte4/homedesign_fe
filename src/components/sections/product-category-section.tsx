@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Ifurniture_product } from "@/src/types/types";
+import { IFurnitureProductType } from "@/src/types/types";
 import ContainerLayout from "../layouts/container-layout";
 import TitleContentBlock from "../contents/title-content-block";
 import { routes } from "@/src/lib/routes";
@@ -17,7 +17,7 @@ interface Props {
   subtitle: string;
   title: string;
   description: string;
-  data: Ifurniture_product[];
+  data: IFurnitureProductType[];
 }
 
 const ProductCategorySection: React.FC<Props> = ({
@@ -26,6 +26,8 @@ const ProductCategorySection: React.FC<Props> = ({
   description,
   data,
 }) => {
+  const activeData = data.filter((item) => item.is_active);
+
   return (
     <>
       <ContainerLayout className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -42,19 +44,19 @@ const ProductCategorySection: React.FC<Props> = ({
           }}
         >
           <CarouselContent className="">
-            {data.map((item) => (
+            {activeData.map((item) => (
               <CarouselItem key={item.id} className="max-h-96">
                 <ImageCard
-                  image={item.images_url[0].url}
+                  image={item.image_url?.[0]?.url ?? "/placeholder.jpg"}
                   title={item.name}
-                  description={item?.subtitle ?? ""}
-                  ctaHref={`${routes.products}/${item.id}`}
-                  ctaTitle="Learn More"
+                  description={item.meta_description ?? ""}
+                  ctaHref={`${routes.furniture}?productType=${item.slug}`}
+                  ctaTitle="explore"
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
-          {data.length > 1 && (
+          {activeData.length > 1 && (
             <>
               <CarouselPrevious className="absolute left-2 bottom-1/2 -translate-y-1/2 z-10 size-8 [&_svg]:size-4" />
 

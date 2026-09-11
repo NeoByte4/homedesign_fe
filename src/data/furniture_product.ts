@@ -7,6 +7,7 @@ export const furniture_product: Ifurniture_product[] = [
     category: ["Sofas", "Living Room", "Seating"],
     subtitle: "Elegant 3-seater with tapered legs",
     productType: "sofa",
+    slug: "sofa_12",
     rating: 4.5,
     inclusion_icons: ["Sectional Sofas"],
     images_url: [
@@ -229,6 +230,7 @@ export const furniture_product: Ifurniture_product[] = [
     name: "Farmhouse Dining Table",
     category: ["Dining Tables"],
     productType: "table",
+    slug: "table_1e",
     subtitle: "Solid wood dining table with cross base",
     inclusion_icons: ["setup", "delivery"],
     rating: 4.7,
@@ -441,6 +443,7 @@ export const furniture_product: Ifurniture_product[] = [
     id: "bed-001",
     name: "Upholstered Platform Bed",
     productType: "bed",
+    slug: "bed_hc",
     category: ["King Size Beds"],
     subtitle: "Modern headboard with button tufting",
     inclusion_icons: ["delivery", "servicing"],
@@ -656,6 +659,7 @@ export const furniture_product: Ifurniture_product[] = [
     name: "Ergonomic Office Chair",
     category: ["Dining Tables", "Office Tables", "Coffee Tables"],
     productType: "chair",
+    slug: "chair_yh2",
     subtitle: "Adjustable mesh back with lumbar support",
     inclusion_icons: ["setup", "servicing"],
     rating: 4.8,
@@ -874,6 +878,7 @@ export const furniture_product: Ifurniture_product[] = [
     name: "Minimalist Coffee Table",
     category: ["Outdoor Tables", "Bar Tables", "Meeting Tables"],
     productType: "sofa",
+    slug: "sofa_h12r",
     subtitle: "Glass top with geometric metal base",
     inclusion_icons: ["setup", "delivery", "servicing"],
     rating: 4.4,
@@ -1085,6 +1090,7 @@ export const furniture_product: Ifurniture_product[] = [
   {
     id: "shelf-001",
     name: "Mid-Century Modern Bookshelf",
+    slug: "bookshelf_ob3_3",
     category: [
       "Freestanding Bookshelves",
       "Ladder Bookshelves",
@@ -1299,12 +1305,12 @@ export const furniture_product: Ifurniture_product[] = [
       },
     ],
   },
-
   {
     id: "bed-001",
     name: "Scandinavian Platform Bed",
     category: ["Panel Beds", "Storage Beds", "Canopy Beds"],
     productType: "bed",
+    slug: "bed_jb_1",
     subtitle: "Minimalist queen bed with integrated storage",
     rating: 4.8,
     inclusion_icons: ["setup", "delivery", "servicing"],
@@ -1447,12 +1453,12 @@ export const furniture_product: Ifurniture_product[] = [
       ],
     },
   },
-
   {
     id: "table-001",
     name: "Industrial Dining Table",
     category: ["Dining Tables"],
     productType: "table",
+    slug: "table_b3_4",
     subtitle: "Rustic 6-seater with metal frame",
     rating: 4.6,
     inclusion_icons: ["delivery", "servicing"],
@@ -1595,158 +1601,10 @@ export const furniture_product: Ifurniture_product[] = [
       ],
     },
   },
-
-  {
-    id: "desk-001",
-    name: "Minimalist Writing Desk",
-    productType: "writing desk",
-    category: ["Desks", "Home Office", "Storage"],
-    subtitle: "Compact workstation with floating shelves",
-    rating: 4.7,
-    inclusion_icons: ["setup", "delivery"],
-    images_url: [
-      {
-        id: "img-desk-001-1",
-        url: "/images/Retreat-101(1+2+2).png",
-      },
-      {
-        id: "img-desk-001-2",
-        url: "/images/desks/minimalist-desk-2.webp",
-      },
-      {
-        id: "img-desk-001-3",
-        url: "/images/desks/minimalist-desk-3.webp",
-      },
-    ],
-    video_url: [
-      {
-        id: "video-desk-001",
-        url: "/videos/desks/minimalist-desk.mp4",
-      },
-    ],
-    price_range: "RS: 1,099 - 1,399",
-    price: 1199,
-    discount: 15,
-
-    color: [
-      {
-        id: "color-013",
-        name: "Matte Black",
-        color_code: "#2C2C2C",
-      },
-      {
-        id: "color-014",
-        name: "Birch White",
-        color_code: "#F5F5DC",
-      },
-      {
-        id: "color-015",
-        name: "Graphite Gray",
-        color_code: "#6B6B6B",
-      },
-    ],
-
-    description_content: {
-      type: "doc",
-      content: [
-        {
-          type: "paragraph",
-          content: [
-            {
-              type: "text",
-              text: "Create an inspiring workspace with this minimalist desk designed for modern homes and small offices.",
-            },
-          ],
-        },
-        {
-          type: "paragraph",
-          content: [
-            {
-              type: "text",
-              text: "The sleek design features a spacious work surface, integrated cable management, and floating shelves that keep essentials within reach while maintaining a clean aesthetic.",
-            },
-          ],
-        },
-        {
-          type: "heading",
-          attrs: {
-            level: 3,
-          },
-          content: [
-            {
-              type: "text",
-              text: "Features",
-            },
-          ],
-        },
-        {
-          type: "bulletList",
-          content: [
-            {
-              type: "listItem",
-              content: [
-                {
-                  type: "paragraph",
-                  content: [
-                    {
-                      type: "text",
-                      text: "Engineered wood construction with durable coating",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              type: "listItem",
-              content: [
-                {
-                  type: "paragraph",
-                  content: [
-                    {
-                      type: "text",
-                      text: "Integrated shelf unit for storage and display",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              type: "listItem",
-              content: [
-                {
-                  type: "paragraph",
-                  content: [
-                    {
-                      type: "text",
-                      text: "Hidden cable tray for wire management",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              type: "listItem",
-              content: [
-                {
-                  type: "paragraph",
-                  content: [
-                    {
-                      type: "text",
-                      text: "Includes wall anchor for safety",
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  },
-
   {
     id: "shelf-001",
     name: "Modular Bookshelf",
+    slug: "bookshelf_bh1",
     category: ["Shelving", "Storage", "Living Room"],
     productType: "bookshelf",
     subtitle: "Versatile 5-tier unit with adjustable shelves",
@@ -1891,10 +1749,10 @@ export const furniture_product: Ifurniture_product[] = [
       ],
     },
   },
-
   {
     id: "chair-001",
     name: "Ergonomic Office Chair",
+    slug: "chair_h_h",
     category: ["Chairs", "Home Office", "Seating"],
     productType: "chair",
     subtitle: "Adjustable high-back with lumbar support",
@@ -2039,4 +1897,153 @@ export const furniture_product: Ifurniture_product[] = [
       ],
     },
   },
+
+  // {
+  //   id: "desk-001",
+  //   name: "Minimalist Writing Desk",
+  //   productType: "writing desk",
+  //   slug: "writing-desk",
+  //   category: ["Desks", "Home Office", "Storage"],
+  //   subtitle: "Compact workstation with floating shelves",
+  //   rating: 4.7,
+  //   inclusion_icons: ["setup", "delivery"],
+  //   images_url: [
+  //     {
+  //       id: "img-desk-001-1",
+  //       url: "/images/Retreat-101(1+2+2).png",
+  //     },
+  //     {
+  //       id: "img-desk-001-2",
+  //       url: "/images/desks/minimalist-desk-2.webp",
+  //     },
+  //     {
+  //       id: "img-desk-001-3",
+  //       url: "/images/desks/minimalist-desk-3.webp",
+  //     },
+  //   ],
+  //   video_url: [
+  //     {
+  //       id: "video-desk-001",
+  //       url: "/videos/desks/minimalist-desk.mp4",
+  //     },
+  //   ],
+  //   price_range: "RS: 1,099 - 1,399",
+  //   price: 1199,
+  //   discount: 15,
+
+  //   color: [
+  //     {
+  //       id: "color-013",
+  //       name: "Matte Black",
+  //       color_code: "#2C2C2C",
+  //     },
+  //     {
+  //       id: "color-014",
+  //       name: "Birch White",
+  //       color_code: "#F5F5DC",
+  //     },
+  //     {
+  //       id: "color-015",
+  //       name: "Graphite Gray",
+  //       color_code: "#6B6B6B",
+  //     },
+  //   ],
+
+  //   description_content: {
+  //     type: "doc",
+  //     content: [
+  //       {
+  //         type: "paragraph",
+  //         content: [
+  //           {
+  //             type: "text",
+  //             text: "Create an inspiring workspace with this minimalist desk designed for modern homes and small offices.",
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         type: "paragraph",
+  //         content: [
+  //           {
+  //             type: "text",
+  //             text: "The sleek design features a spacious work surface, integrated cable management, and floating shelves that keep essentials within reach while maintaining a clean aesthetic.",
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         type: "heading",
+  //         attrs: {
+  //           level: 3,
+  //         },
+  //         content: [
+  //           {
+  //             type: "text",
+  //             text: "Features",
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         type: "bulletList",
+  //         content: [
+  //           {
+  //             type: "listItem",
+  //             content: [
+  //               {
+  //                 type: "paragraph",
+  //                 content: [
+  //                   {
+  //                     type: "text",
+  //                     text: "Engineered wood construction with durable coating",
+  //                   },
+  //                 ],
+  //               },
+  //             ],
+  //           },
+  //           {
+  //             type: "listItem",
+  //             content: [
+  //               {
+  //                 type: "paragraph",
+  //                 content: [
+  //                   {
+  //                     type: "text",
+  //                     text: "Integrated shelf unit for storage and display",
+  //                   },
+  //                 ],
+  //               },
+  //             ],
+  //           },
+  //           {
+  //             type: "listItem",
+  //             content: [
+  //               {
+  //                 type: "paragraph",
+  //                 content: [
+  //                   {
+  //                     type: "text",
+  //                     text: "Hidden cable tray for wire management",
+  //                   },
+  //                 ],
+  //               },
+  //             ],
+  //           },
+  //           {
+  //             type: "listItem",
+  //             content: [
+  //               {
+  //                 type: "paragraph",
+  //                 content: [
+  //                   {
+  //                     type: "text",
+  //                     text: "Includes wall anchor for safety",
+  //                   },
+  //                 ],
+  //               },
+  //             ],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // },
 ];

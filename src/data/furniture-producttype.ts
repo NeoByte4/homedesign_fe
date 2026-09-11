@@ -58,24 +58,6 @@ export const FurnitureProductType: IFurnitureProductType[] = [
   },
 
   {
-    id: "type-004",
-    name: "Chair",
-    slug: "chair",
-    image_url: [
-      {
-        id: "categories/chair",
-        url: "/images/products/office-chair-1.webp",
-      },
-    ],
-    is_active: true,
-    sort_order: 4,
-    meta_title: "Chair Furniture",
-    meta_description: "Browse comfortable and stylish chairs for every space.",
-    created_at: new Date(),
-    updated_at: new Date(),
-  },
-
-  {
     id: "type-005",
     name: "Bookshelf",
     slug: "bookshelf",
@@ -111,4 +93,21 @@ export const FurnitureProductType: IFurnitureProductType[] = [
     created_at: new Date(),
     updated_at: new Date(),
   },
+  // {
+  //   id: "type-004",
+  //   name: "writing desk",
+  //   slug: "writing-desk",
+  //   image_url: [
+  //     {
+  //       id: "categories/chair",
+  //       url: "/images/products/office-chair-1.webp",
+  //     },
+  //   ],
+  //   is_active: true,
+  //   sort_order: 4,
+  //   meta_title: "Chair Furniture",
+  //   meta_description: "Browse comfortable and stylish chairs for every space.",
+  //   created_at: new Date(),
+  //   updated_at: new Date(),
+  // },
 ];

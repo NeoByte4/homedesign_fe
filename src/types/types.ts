@@ -34,6 +34,7 @@ export interface Ifurniture_product {
   name: string;
   category: string[];
   productType: string;
+  slug: string;
   faqs?: IFaq[];
   subtitle: string;
   images_url: IImage[];

@@ -9,6 +9,7 @@ import ErrorTextSection from "@/src/components/notifiers/error-text-section";
 import HeroSection from "@/src/components/sections/hero-section";
 import { productBannerData } from "@/src/data/banner-data";
 import { FurnitureProductType } from "@/src/data/furniture-producttype";
+
 import { routes } from "@/src/lib/routes";
 import { IFurnitureProductType } from "@/src/types/types";
 import { Trash2 } from "lucide-react";
@@ -27,11 +28,11 @@ export default async function Page({ searchParams }: PageProps) {
 
   const query = keyword?.toLowerCase() ?? "";
 
-  const filteredProducts = query
-    ? FurnitureProductType.filter((product) =>
-        product.name.toLowerCase().includes(query),
-      )
-    : FurnitureProductType;
+  const filteredProducts = FurnitureProductType.filter((product) => {
+    if (!product.is_active) return false;
+    if (!query) return true;
+    return product.name.toLowerCase().includes(query);
+  }).sort((a, b) => a.sort_order - b.sort_order);
 
   return (
     <>
@@ -52,17 +53,17 @@ export default async function Page({ searchParams }: PageProps) {
         <ContainerLayout>
           <div className="md:max-w-3xl mb-8">
             <TitleContentBlock
-              title="Explore Our Destinations"
-              description="From sun-soaked beaches to historic cities, discover the Mediterranean destinations we specialize in. Find your perfect getaway across Greece, Italy, Croatia, Spain, and more."
+              title="Browse Our Categories"
+              description="From cozy sofas to functional desks, explore our full range of furniture categories crafted for every room in your home."
             />
           </div>
           <div className="w-full max-w-sm mb-3 flex items-center gap-2">
             <div className="h-10 flex-1">
-              <KeywordSearch redirectRoute={routes.products} />
+              <KeywordSearch redirectRoute={routes.furniture} />
             </div>
 
             {query && query.length > 0 && (
-              <Link href={`${routes.products}#results`}>
+              <Link href={`${routes.furniture}#results`}>
                 <Button variant="destructive" className="h-10 w-10 p-0">
                   <Trash2 size={18} />
                 </Button>
@@ -82,14 +83,14 @@ export default async function Page({ searchParams }: PageProps) {
                     <ProductCategoryCard
                       name={product.name}
                       image={product.image_url?.[0]?.url ?? ""}
-                      href={`${routes.products}/${product.slug}`}
+                      href={`${routes.furniture}/${product.slug}`}
                     />
                   </div>
                 ),
               )}
             </div>
           ) : (
-            <ErrorTextSection customMsg="No Destination mathing your query" />
+            <ErrorTextSection customMsg="No category matching your query" />
           )}
         </ContainerLayout>
       </SpacingLayout>

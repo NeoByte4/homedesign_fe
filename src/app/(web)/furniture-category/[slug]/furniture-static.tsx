@@ -29,12 +29,13 @@ const tabs = [
   { key: "overview", title: "Overview" },
 ];
 
-export default function FurnitureStatic({
+export default function FurnitureCategoryStatic({
   searchParams,
   data,
   products,
+  tab,
 }: Props) {
-  const [activeTab, setActiveTab] = useState("details");
+  const [activeTab, setActiveTab] = useState(tab);
   const keyword =
     typeof searchParams.keyword === "string" ? searchParams.keyword : "";
   const query = keyword.toLowerCase();
@@ -46,9 +47,7 @@ export default function FurnitureStatic({
     switch (activeTab) {
       case "overview":
         return (
-          <>
-            <TitleContentBlock title={data.name} description={data.subtitle} />
-          </>
+          <TitleContentBlock title={data.name} description={data.subtitle} />
         );
 
       case "details":
@@ -62,10 +61,14 @@ export default function FurnitureStatic({
 
             <div className="flex items-center gap-2 justify-between mb-6 mt-6">
               <div className="w-full max-w-sm flex items-center gap-2">
-                <KeywordSearch redirectRoute={routes.products} />
+                <KeywordSearch
+                  redirectRoute={`${routes.furniture}/${data.productType.toLowerCase()}`}
+                />
 
                 {query.length > 0 && (
-                  <Link href={`${routes.products}#results`}>
+                  <Link
+                    href={`${routes.furniture}/${data.productType.toLowerCase()}#results`}
+                  >
                     <Button variant="destructive" className="h-10 w-10 p-0">
                       <Trash2 size={18} />
                     </Button>
@@ -86,7 +89,7 @@ export default function FurnitureStatic({
                     subtitle={product.subtitle}
                     image={product.images_url?.[0]?.url ?? ""}
                     rating={product.rating}
-                    slug={product.id}
+                    slug={product.slug}
                     discount={product.discount}
                     price={product.price}
                     price_range={product.price_range}
@@ -113,8 +116,6 @@ export default function FurnitureStatic({
         subtitle={data.subtitle}
       >
         <section className="absolute z-50 w-full md:h-20 bottom-0 bg-black/30 backdrop-blur-sm rounded-lg flex items-center justify-center overflow-hidden">
-          <div id="results" />
-
           <div className="flex-1 h-full gap-2 flex flex-wrap items-center justify-center md:justify-start p-2">
             {tabs.map((item) => (
               <button
@@ -148,7 +149,7 @@ export default function FurnitureStatic({
           {tabRenderer()}
         </TwoColumnLayout>
 
-        {shouldRenderSection(data.faqs) && <FaqSection data={data.faqs} />}
+        {shouldRenderSection(data.faqs) && <FaqSection data={data.faqs!} />}
       </SpacingLayout>
     </>
   );

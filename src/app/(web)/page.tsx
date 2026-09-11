@@ -11,6 +11,7 @@ import BrandShowcase from "@/src/components/sections/brand-showcase";
 import SiteReviewSection from "@/src/components/sections/reviews/site-reviews-seciton";
 import NewsletterSection from "@/src/components/sections/newsletter/newsletter-section";
 import GlobalProductSearch from "@/src/components/form/global-furniture-search";
+import { FurnitureProductType } from "@/src/data/furniture-producttype";
 
 function Page() {
   const hero = homepageData[0];
@@ -20,6 +21,7 @@ function Page() {
   const rotateProductData = furniture_product;
   const brandShowcaseData = furniture_product;
 
+  const productCategory = FurnitureProductType;
   return (
     <>
       <HeroSection
@@ -41,12 +43,12 @@ function Page() {
             data={topProducts}
           />
         )}
-        {shouldRenderSection(productCategories) && (
+        {shouldRenderSection(productCategory) && (
           <ProductCategorySection
             subtitle="Find Your Style"
             title="Explore Our Collections"
             description="Discover thoughtfully designed furniture for every room, crafted to bring comfort, style, and character to your space. From timeless classics to modern statement pieces, explore our carefully selected collections made to complement your lifestyle and transform your home into a space you truly love."
-            data={productCategories}
+            data={productCategory}
           />
         )}
         {shouldRenderSection(productlist) && (

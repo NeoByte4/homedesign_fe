@@ -50,7 +50,7 @@ const TopProductSection: React.FC<Props> = ({
               <TopProductCard
                 location={product.name}
                 image={product.images_url[0].url}
-                href={`${routes.products}/${product.id}`}
+                href={`${routes.products}/${product.slug}`}
               />
             </div>
           ))}

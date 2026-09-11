@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { furniture_product } from "@/src/data/furniture_product";
-import FurnitureStatic from "./furniture-static";
+import FurnitureCategoryStatic from "./furniture-static";
 
 interface PageProps {
   params: Promise<{
@@ -18,7 +18,6 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const productType = slug.toLowerCase();
 
-  // Get all products for this furniture type
   const products = furniture_product.filter(
     (product) => product.productType.toLowerCase() === productType,
   );
@@ -30,10 +29,10 @@ export default async function Page({ params, searchParams }: PageProps) {
   const data = products[0];
 
   return (
-    <FurnitureStatic
+    <FurnitureCategoryStatic
       data={data}
       products={products}
-      tab={paramsData.tab ?? "overview"}
+      tab={paramsData.tab ?? "details"}
       slug={slug}
       searchParams={paramsData}
     />
