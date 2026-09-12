@@ -11,6 +11,8 @@ import {
   IFeature,
   IWarranty,
   ICapacityOption,
+  CurrencyCode,
+  IProductVariant,
 } from "./generic";
 import { TiptapDocument } from "./tiptap";
 
@@ -56,21 +58,61 @@ export interface IFurnitureProductType {
 export interface Ifurniture_product {
   id: string;
   name: string;
+  subtitle: string;
+  slug: string;
   category: string[];
   productType: string;
-  slug: string;
-  faqs?: IFaq[];
-  subtitle: string;
+  short_description?: string;
+  description_content?: TiptapDocument;
+
+  furniture_type_id?: string; // Foreign Key -> IFurnitureType._id
+  collection_id?: string;
+  tags?: string[];
+
   images_url: IImage[];
   video_url?: IVideo[];
-  rating?: number;
-  price_range: string;
-  discount?: number;
+  inclusion_icons?: string[]; // URLs or keys for feature badges
+  model_3d_url?: string;
+
   price?: number;
-  color?: IColorOption[];
-  color_options?: IColorOption[];
+  compare_at_price?: number;
+  discount?: number;
+  price_range: string;
+  price_range_structured?: IPriceRange;
+  currency?: CurrencyCode;
+  is_available?: boolean;
+  stock_quantity?: number;
+
+  has_variants?: boolean;
+  variants?: IProductVariant[];
+  color?: IColorOption[]; // Active selected colors
+  color_options?: IColorOption[]; // Full available palette options
   fabric?: IFabric[];
-  description_content?: TiptapDocument;
+  materials?: IMaterialOption[];
+  size_options?: ISizeOption[];
+  capacity_options?: ICapacityOption[];
+
   dimensions?: IDimensions[];
-  inclusion_icons?: string[];
+  features?: IFeature[];
+  seating_capacity?: number[];
+  weight_capacity_kg?: number;
+  environment?: ("indoor" | "outdoor" | "semi_outdoor")[];
+
+  is_customizable?: boolean;
+  assembly_required?: boolean;
+  assembly_estimated_minutes?: number;
+  is_adjustable?: boolean;
+  is_foldable?: boolean;
+  is_stackable?: boolean;
+  is_reclining?: boolean;
+
+  warranty?: IWarranty;
+  care_instructions?: string[];
+  maintenance_instructions?: string[];
+
+  faqs?: IFaq[];
+
+  rating?: number;
+  created_at?: Date;
+  updated_at?: Date;
 }

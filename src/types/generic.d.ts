@@ -75,6 +75,20 @@ export interface IPriceRange {
   maximum: number;
   currency: CurrencyCode;
 }
+
+export interface IProductVariant {
+  sku: string;
+  variant_name: string;
+  color_id?: string;
+  fabric_id?: string;
+  size_code?: string;
+  price: number;
+  compare_at_price?: number;
+  stock_quantity: number;
+  is_available: boolean;
+  image?: IImage;
+  weight_kg?: number;
+}
 export interface IMaterialOption {
   id: string;
   category: string;
