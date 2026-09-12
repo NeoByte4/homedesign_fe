@@ -11,7 +11,7 @@ import BrandShowcase from "@/src/components/sections/brand-showcase";
 import SiteReviewSection from "@/src/components/sections/reviews/site-reviews-seciton";
 import NewsletterSection from "@/src/components/sections/newsletter/newsletter-section";
 import GlobalProductSearch from "@/src/components/form/global-furniture-search";
-import { FurnitureProductType } from "@/src/data/furniture-producttype";
+import { FurnitureProductType } from "@/src/data/furniture_types";
 
 function Page() {
   const hero = homepageData[0];

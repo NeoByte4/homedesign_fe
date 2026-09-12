@@ -141,12 +141,24 @@ const ProductStatic = ({ product }: { product: Ifurniture_product }) => {
                     {dim.name && (
                       <p className="font-semibold mb-1">{dim.name}</p>
                     )}
-                    {dim.overall && (
-                      <p>
-                        W {dim.overall.width}
-                        {dim.overall.unit} × D {dim.overall.depth}
-                        {dim.overall.unit} × H {dim.overall.height}
-                        {dim.overall.unit}
+
+                    {dim.width != null &&
+                      dim.depth != null &&
+                      dim.height != null && (
+                        <p>
+                          W {dim.width}
+                          {dim.unit?.code} × D {dim.depth}
+                          {dim.unit?.code} × H {dim.height}
+                          {dim.unit?.code}
+                        </p>
+                      )}
+
+                    {dim.seat_width != null && (
+                      <p className="text-text-secondary">
+                        Seat: W {dim.seat_width}
+                        {dim.unit?.code} × D {dim.seat_depth}
+                        {dim.unit?.code} × H {dim.seat_height}
+                        {dim.unit?.code}
                       </p>
                     )}
                   </div>

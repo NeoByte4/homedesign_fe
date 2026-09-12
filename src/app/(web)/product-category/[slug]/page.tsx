@@ -27,7 +27,6 @@ export default async function Page({ params, searchParams }: PageProps) {
   }
 
   const data = products[0];
-
   return (
     <FurnitureCategoryStatic
       data={data}

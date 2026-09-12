@@ -34,7 +34,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 1399,
     discount: 15,
 
-    color: [
+    color_options: [
       {
         id: "color-004",
         name: "Teal",
@@ -171,46 +171,17 @@ export const furniture_product: Ifurniture_product[] = [
     dimensions: [
       {
         name: "Standard",
-
-        overall: {
-          width: 84,
-          depth: 35,
-          height: 32,
-          unit: "in",
-        },
-
-        seating: {
-          width: 68,
-          depth: 24,
-          height: 18,
-          unit: "in",
-        },
-
-        arm: {
-          width: 6,
-          depth: 35,
-          height: 24,
-          unit: "in",
-        },
-
-        seatHeight: {
-          value: 18,
-          unit: "in",
-        },
-
-        backFrame: {
-          width: 68,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 750,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 120,
-          unit: "lb",
+        width: 84,
+        depth: 35,
+        height: 32,
+        seat_width: 68,
+        seat_depth: 24,
+        seat_height: 18,
+        armrest_height: 24,
+        backrest_height: 68,
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -258,7 +229,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 999,
     discount: 10,
 
-    color: [
+    color_options: [
       {
         id: "color-007",
         name: "Natural Oak",
@@ -395,46 +366,17 @@ export const furniture_product: Ifurniture_product[] = [
     dimensions: [
       {
         name: "Standard",
-
-        overall: {
-          width: 78,
-          depth: 40,
-          height: 30,
-          unit: "in",
-        },
-
-        seating: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        arm: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        seatHeight: {
-          value: 0,
-          unit: "in",
-        },
-
-        backFrame: {
-          width: 0,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 500,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 110,
-          unit: "lb",
+        width: 78,
+        depth: 40,
+        height: 30,
+        seat_width: 0,
+        seat_depth: 0,
+        seat_height: 0,
+        armrest_height: 0,
+        backrest_height: 0,
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -472,7 +414,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 1799,
     discount: 12,
 
-    color: [
+    color_options: [
       {
         id: "color-010",
         name: "Blush Pink",
@@ -609,46 +551,17 @@ export const furniture_product: Ifurniture_product[] = [
     dimensions: [
       {
         name: "Queen",
-
-        overall: {
-          width: 62,
-          depth: 84,
-          height: 48,
-          unit: "in",
-        },
-
-        seating: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        arm: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        seatHeight: {
-          value: 0,
-          unit: "in",
-        },
-
-        backFrame: {
-          width: 0,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 600,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 150,
-          unit: "lb",
+        width: 62,
+        depth: 84,
+        height: 48,
+        seat_width: 0,
+        seat_depth: 0,
+        seat_height: 0,
+        armrest_height: 0,
+        backrest_height: 0,
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -687,7 +600,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 399,
     discount: 20,
 
-    color: [
+    color_options: [
       {
         id: "color-013",
         name: "Black Mesh",
@@ -824,51 +737,18 @@ export const furniture_product: Ifurniture_product[] = [
     dimensions: [
       {
         name: "Standard",
-
-        overall: {
-          width: 28,
-          depth: 28,
-          height: 48,
-          unit: "in",
-        },
-
-        seating: {
-          width: 20,
-          depth: 20,
-          height: 20,
-          unit: "in",
-        },
-
-        arm: {
-          width: 3,
-          depth: 10,
-          height: 10,
-          unit: "in",
-        },
-
-        swivelMechanism: {
-          diameter: 27,
-          unit: "in",
-        },
-
-        seatHeight: {
-          value: 20,
-          unit: "in",
-        },
-
-        backFrame: {
-          width: 20,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 250,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 45,
-          unit: "lb",
+        width: 28,
+        depth: 28,
+        height: 48,
+        seat_width: 20,
+        seat_depth: 20,
+        seat_height: 20,
+        armrest_height: 10,
+        diameter: 27,
+        backrest_height: 20,
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -906,7 +786,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 479,
     discount: 8,
 
-    color: [
+    color_options: [
       {
         id: "color-016",
         name: "Clear Glass",
@@ -1043,46 +923,17 @@ export const furniture_product: Ifurniture_product[] = [
     dimensions: [
       {
         name: "Standard",
-
-        overall: {
-          width: 48,
-          depth: 24,
-          height: 18,
-          unit: "in",
-        },
-
-        seating: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        arm: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
-
-        seatHeight: {
-          value: 0,
-          unit: "in",
-        },
-
-        backFrame: {
-          width: 0,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 100,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 35,
-          unit: "lb",
+        width: 48,
+        depth: 24,
+        height: 18,
+        seat_width: 0,
+        seat_depth: 0,
+        seat_height: 0,
+        armrest_height: 0,
+        backrest_height: 0,
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -1124,7 +975,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 349,
     discount: 15,
 
-    color: [
+    color_options: [
       {
         id: "color-019",
         name: "Walnut",
@@ -1262,45 +1113,21 @@ export const furniture_product: Ifurniture_product[] = [
       {
         name: "Standard",
 
-        overall: {
-          width: 36,
-          depth: 14,
-          height: 60,
-          unit: "in",
-        },
+        width: 36,
+        depth: 14,
+        height: 60,
 
-        seating: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
+        seat_width: 0,
+        seat_depth: 0,
+        seat_height: 0,
 
-        arm: {
-          width: 0,
-          depth: 0,
-          height: 0,
-          unit: "in",
-        },
+        armrest_height: 0,
 
-        seatHeight: {
-          value: 0,
-          unit: "in",
-        },
+        backrest_height: 0,
 
-        backFrame: {
-          width: 0,
-          unit: "in",
-        },
-
-        weightCapacity: {
-          value: 250,
-          unit: "lb",
-        },
-
-        weight: {
-          value: 55,
-          unit: "lb",
+        unit: {
+          name: "Inches",
+          code: "in",
         },
       },
     ],
@@ -1338,7 +1165,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 2699,
     discount: 10,
 
-    color: [
+    color_options: [
       {
         id: "color-007",
         name: "Natural Oak",
@@ -1486,7 +1313,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 2099,
     discount: 12,
 
-    color: [
+    color_options: [
       {
         id: "color-010",
         name: "Rustic Brown",
@@ -1634,7 +1461,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 1699,
     discount: 10,
 
-    color: [
+    color_options: [
       {
         id: "color-016",
         name: "Espresso",
@@ -1782,7 +1609,7 @@ export const furniture_product: Ifurniture_product[] = [
     price: 1999,
     discount: 18,
 
-    color: [
+    color_options: [
       {
         id: "color-019",
         name: "Black",
@@ -1897,153 +1724,4 @@ export const furniture_product: Ifurniture_product[] = [
       ],
     },
   },
-
-  // {
-  //   id: "desk-001",
-  //   name: "Minimalist Writing Desk",
-  //   productType: "writing desk",
-  //   slug: "writing-desk",
-  //   category: ["Desks", "Home Office", "Storage"],
-  //   subtitle: "Compact workstation with floating shelves",
-  //   rating: 4.7,
-  //   inclusion_icons: ["setup", "delivery"],
-  //   images_url: [
-  //     {
-  //       id: "img-desk-001-1",
-  //       url: "/images/Retreat-101(1+2+2).png",
-  //     },
-  //     {
-  //       id: "img-desk-001-2",
-  //       url: "/images/desks/minimalist-desk-2.webp",
-  //     },
-  //     {
-  //       id: "img-desk-001-3",
-  //       url: "/images/desks/minimalist-desk-3.webp",
-  //     },
-  //   ],
-  //   video_url: [
-  //     {
-  //       id: "video-desk-001",
-  //       url: "/videos/desks/minimalist-desk.mp4",
-  //     },
-  //   ],
-  //   price_range: "RS: 1,099 - 1,399",
-  //   price: 1199,
-  //   discount: 15,
-
-  //   color: [
-  //     {
-  //       id: "color-013",
-  //       name: "Matte Black",
-  //       color_code: "#2C2C2C",
-  //     },
-  //     {
-  //       id: "color-014",
-  //       name: "Birch White",
-  //       color_code: "#F5F5DC",
-  //     },
-  //     {
-  //       id: "color-015",
-  //       name: "Graphite Gray",
-  //       color_code: "#6B6B6B",
-  //     },
-  //   ],
-
-  //   description_content: {
-  //     type: "doc",
-  //     content: [
-  //       {
-  //         type: "paragraph",
-  //         content: [
-  //           {
-  //             type: "text",
-  //             text: "Create an inspiring workspace with this minimalist desk designed for modern homes and small offices.",
-  //           },
-  //         ],
-  //       },
-  //       {
-  //         type: "paragraph",
-  //         content: [
-  //           {
-  //             type: "text",
-  //             text: "The sleek design features a spacious work surface, integrated cable management, and floating shelves that keep essentials within reach while maintaining a clean aesthetic.",
-  //           },
-  //         ],
-  //       },
-  //       {
-  //         type: "heading",
-  //         attrs: {
-  //           level: 3,
-  //         },
-  //         content: [
-  //           {
-  //             type: "text",
-  //             text: "Features",
-  //           },
-  //         ],
-  //       },
-  //       {
-  //         type: "bulletList",
-  //         content: [
-  //           {
-  //             type: "listItem",
-  //             content: [
-  //               {
-  //                 type: "paragraph",
-  //                 content: [
-  //                   {
-  //                     type: "text",
-  //                     text: "Engineered wood construction with durable coating",
-  //                   },
-  //                 ],
-  //               },
-  //             ],
-  //           },
-  //           {
-  //             type: "listItem",
-  //             content: [
-  //               {
-  //                 type: "paragraph",
-  //                 content: [
-  //                   {
-  //                     type: "text",
-  //                     text: "Integrated shelf unit for storage and display",
-  //                   },
-  //                 ],
-  //               },
-  //             ],
-  //           },
-  //           {
-  //             type: "listItem",
-  //             content: [
-  //               {
-  //                 type: "paragraph",
-  //                 content: [
-  //                   {
-  //                     type: "text",
-  //                     text: "Hidden cable tray for wire management",
-  //                   },
-  //                 ],
-  //               },
-  //             ],
-  //           },
-  //           {
-  //             type: "listItem",
-  //             content: [
-  //               {
-  //                 type: "paragraph",
-  //                 content: [
-  //                   {
-  //                     type: "text",
-  //                     text: "Includes wall anchor for safety",
-  //                   },
-  //                 ],
-  //               },
-  //             ],
-  //           },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  // },
 ];

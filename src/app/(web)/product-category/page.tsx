@@ -8,7 +8,7 @@ import SpacingLayout from "@/src/components/layouts/spacing-layout";
 import ErrorTextSection from "@/src/components/notifiers/error-text-section";
 import HeroSection from "@/src/components/sections/hero-section";
 import { productBannerData } from "@/src/data/banner-data";
-import { FurnitureProductType } from "@/src/data/furniture-producttype";
+import { FurnitureProductType } from "@/src/data/furniture_types";
 
 import { routes } from "@/src/lib/routes";
 import { IFurnitureProductType } from "@/src/types/types";
@@ -82,7 +82,11 @@ export default async function Page({ searchParams }: PageProps) {
                   >
                     <ProductCategoryCard
                       name={product.name}
-                      image={product.image_url?.[0]?.url ?? ""}
+                      image={
+                        product.thumbnail_image?.url ??
+                        product.banner_images?.[0]?.url ??
+                        ""
+                      }
                       href={`${routes.furniture}/${product.slug}`}
                     />
                   </div>

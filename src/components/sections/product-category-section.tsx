@@ -47,10 +47,14 @@ const ProductCategorySection: React.FC<Props> = ({
             {activeData.map((item) => (
               <CarouselItem key={item.id} className="max-h-96">
                 <ImageCard
-                  image={item.image_url?.[0]?.url ?? "/placeholder.jpg"}
+                  image={
+                    item.thumbnail_image?.url ??
+                    item.banner_images?.[0]?.url ??
+                    "/placeholder.jpg"
+                  }
                   title={item.name}
                   description={item.meta_description ?? ""}
-                  ctaHref={`${routes.furniture}?productType=${item.slug}`}
+                  ctaHref={`${routes.furniture}/${item.slug}`}
                   ctaTitle="explore"
                 />
               </CarouselItem>

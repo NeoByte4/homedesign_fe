@@ -1,7 +1,7 @@
 export const routes = {
   home: "/",
   products: "/product",
-  furniture: "/furniture-category",
+  furniture: "/product-category",
   HomeDesign: "/home-design",
   CustomDesign: "/custom-design",
   AboutUs: "/about-us",

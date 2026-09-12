@@ -1,6 +1,6 @@
 import React from "react";
 import HeadingText from "../../ui/heading-text";
-import ContactForm from "../../form/contact-form";
+import FilterPanel from "../../form/filter-panel";
 
 const SidebarContactForm = () => {
   return (
@@ -12,7 +12,7 @@ const SidebarContactForm = () => {
         Your travel story deserves more than the expected. Share your vision,
         and we’ll design an experience as unique as you are.
       </p>
-      <ContactForm />
+      <FilterPanel />
     </div>
   );
 };
