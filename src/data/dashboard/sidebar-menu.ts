@@ -10,9 +10,16 @@ import {
   MessageCircle,
   Settings,
   LogOut,
+  LayoutDashboard,
 } from "lucide-react";
 
 export const customerSidebarMenu = [
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: LayoutDashboard,
+  },
+
   {
     title: "My Profile",
     href: "/dashboard/profile",
