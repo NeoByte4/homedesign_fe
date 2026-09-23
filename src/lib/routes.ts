@@ -6,6 +6,7 @@ export const routes = {
   CustomDesign: "/custom-design",
   AboutUs: "/about-us",
   contact: "/contact",
-  signup: "/signup",
+  signup: "/auth/signup",
+  signin: "/auth/login",
   reviews: "/reviews",
 };

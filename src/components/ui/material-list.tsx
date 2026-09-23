@@ -1,19 +1,17 @@
-// timeline.tsx
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 
-export interface TimelineItemProps {
-  badgeText: string;
+export interface MaterialListItemProps {
   title: string;
   description: string;
+  index: number;
   isLast?: boolean;
-  children?: React.ReactNode;
+  properties?: string[];
 }
 
-export interface TimelineProps {
+export interface MaterialListProps {
   items: Array<{
-    badgeText: string;
     title: string;
     description: string;
     properties?: string[];
@@ -21,16 +19,22 @@ export interface TimelineProps {
   className?: string;
 }
 
-const TimelineItem = React.forwardRef<
+type MaterialListItemElementProps = MaterialListItemProps &
+  Omit<React.HTMLAttributes<HTMLDivElement>, "title">;
+
+type MaterialListElementProps = MaterialListProps &
+  React.HTMLAttributes<HTMLDivElement>;
+
+const MaterialListItem = React.forwardRef<
   HTMLDivElement,
-  TimelineItemProps & React.HTMLAttributes<HTMLDivElement>
+  MaterialListItemElementProps
 >(
   (
     {
-      badgeText,
       title,
       description,
-      children,
+      index,
+      properties,
       isLast = false,
       className,
       ...props
@@ -39,67 +43,71 @@ const TimelineItem = React.forwardRef<
   ) => (
     <div
       ref={ref}
-      className={cn("relative flex gap-4 md:gap-6 pb-8", className)}
+      className={cn(
+        "group relative flex gap-4 md:gap-6 pb-10 last:pb-0",
+        className,
+      )}
       {...props}
     >
       {!isLast && (
-        <div className="absolute left-[38px] md:left-[42px] top-10 h-full w-px border border-primary-dark/30" />
+        <div
+          aria-hidden
+          className="absolute left-[27px] md:left-[31px] top-14 bottom-0 w-px bg-gradient-to-b from-primary-dark/40 to-primary-dark/10"
+        />
       )}
 
       <Badge
         variant="outline"
-        className="relative z-10 bg-background px-3 py-1 text-sm md:text-base border-2 border-primary-dark/50 font-secondary font-medium h-fit mt-1 min-w-[70px] md:min-w-[85px] justify-center text-center"
+        className="relative z-10 bg-background px-3 py-1 text-lg border-2 border-primary-dark font-secondary font-medium h-fit mt-2"
       >
-        {badgeText}
+        {String(index).padStart(2, "0")}
       </Badge>
 
-      <div className="flex-1 space-y-2 pt-0.5">
-        <div>
-          <h3 className="text-xl font-semibold tracking-tight font-secondary text-text-primary">
-            {title}
-          </h3>
-        </div>
+      <div className="flex-1 space-y-1.5 pt-1 md:pt-2">
+        <h3 className="font-secondary text-lg font-semibold tracking-tight text-text-primary md:text-xl">
+          {title}
+        </h3>
 
-        <div className="text-text-secondary text-sm md:text-base">
-          {description}
-        </div>
+        {description && (
+          <p className="text-sm leading-relaxed text-text-secondary md:text-base">
+            {description}
+          </p>
+        )}
 
-        {children}
-      </div>
-    </div>
-  ),
-);
-TimelineItem.displayName = "TimelineItem";
-
-const Timeline = React.forwardRef<
-  HTMLDivElement,
-  TimelineProps & React.HTMLAttributes<HTMLDivElement>
->(({ items, className, ...props }, ref) => (
-  <div ref={ref} className={cn("space-y-2", className)} {...props}>
-    {items.map((item, index) => (
-      <TimelineItem
-        key={index}
-        badgeText={item.badgeText}
-        title={item.title}
-        description={item.description}
-        isLast={index === items.length - 1}
-      >
-        {item.properties && item.properties.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-3">
-            {item.properties.map((prop, i) => (
+        {properties && properties.length > 0 && (
+          <div className="flex flex-wrap gap-2 pt-2">
+            {properties.map((prop, i) => (
               <span
                 key={i}
-                className="text-xs bg-primary-dark/5 text-primary-dark px-2 py-1 rounded-md font-medium"
+                className="rounded-full bg-primary-dark/5 px-3 py-1 text-xs font-medium text-primary-dark ring-1 ring-inset ring-primary-dark/10"
               >
                 {prop}
               </span>
             ))}
           </div>
         )}
-      </TimelineItem>
-    ))}
-  </div>
-));
-Timeline.displayName = "Timeline";
+      </div>
+    </div>
+  ),
+);
+MaterialListItem.displayName = "MaterialListItem";
 
-export { Timeline, TimelineItem };
+const MaterialList = React.forwardRef<HTMLDivElement, MaterialListElementProps>(
+  ({ items, className, ...props }, ref) => (
+    <div ref={ref} className={cn("space-y-0", className)} {...props}>
+      {items.map((item, index) => (
+        <MaterialListItem
+          key={index}
+          title={item.title}
+          description={item.description}
+          properties={item.properties}
+          index={index + 1}
+          isLast={index === items.length - 1}
+        />
+      ))}
+    </div>
+  ),
+);
+MaterialList.displayName = "MaterialList";
+
+export { MaterialList, MaterialListItem };

@@ -3,7 +3,7 @@
 import TitleContentBlock from "@/src/components/contents/title-content-block";
 import ErrorTextSection from "@/src/components/notifiers/error-text-section";
 import type { Ifurniture_product } from "@/src/types/types";
-import { Timeline } from "../ui/material-list";
+import { MaterialList } from "../ui/material-list";
 
 interface Props {
   materials: Ifurniture_product["materials"];
@@ -20,9 +20,8 @@ export const ProductMaterials = ({ materials }: Props) => {
       </div>
 
       {materials && materials.length > 0 ? (
-        <Timeline
+        <MaterialList
           items={materials.map((mat) => ({
-            badgeText: mat.category,
             title: mat.subtype ? `${mat.name} — ${mat.subtype}` : mat.name,
             description: mat.description ?? "",
             properties: mat.properties,
