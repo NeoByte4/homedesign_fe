@@ -32,6 +32,11 @@ export const customerSidebarMenu = [
     icon: ShoppingBag,
   },
   {
+    title: "save items",
+    href: "/dashboard/wishlist",
+    icon: Heart,
+  },
+  {
     title: "Address Book",
     href: "/dashboard/addresses",
     icon: MapPin,
@@ -40,11 +45,6 @@ export const customerSidebarMenu = [
     title: "Returns & Cancellations",
     href: "/dashboard/cancellations",
     icon: PackageX,
-  },
-  {
-    title: "save items",
-    href: "/dashboard/wishlist",
-    icon: Heart,
   },
   {
     title: "Payment Methods",

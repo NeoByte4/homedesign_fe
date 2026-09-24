@@ -34,6 +34,8 @@ export const userData = [
         street_address: "Bode Road",
         landmark: "Near Bode Temple",
         postal_code: "44800",
+        latitude: 27.6799,
+        longitude: 85.3875,
         is_default: true,
       },
     ],
@@ -79,7 +81,23 @@ export const userData = [
       },
     ],
 
-    addresses: [],
+    addresses: [
+      {
+        id: "addr002",
+        full_name: "Ramesh Adhikari",
+        phone: "9811111111",
+        province: "Bagmati",
+        district: "Kathmandu",
+        city: "Kathmandu",
+        ward_no: 10,
+        street_address: "New Baneshwor",
+        landmark: "Near Civil Mall",
+        postal_code: "44600",
+        latitude: 27.6893,
+        longitude: 85.3417,
+        is_default: true,
+      },
+    ],
     wishlist_product_ids: [],
     cart_id: null,
 
@@ -121,7 +139,23 @@ export const userData = [
       },
     ],
 
-    addresses: [],
+    addresses: [
+      {
+        id: "addr003",
+        full_name: "Alex Pandey",
+        phone: "9809999999",
+        province: "Bagmati",
+        district: "Lalitpur",
+        city: "Lalitpur",
+        ward_no: 3,
+        street_address: "Jhamsikhel Road",
+        landmark: "Near Patan Durbar Square",
+        postal_code: "44700",
+        latitude: 27.6766,
+        longitude: 85.3143,
+        is_default: true,
+      },
+    ],
     wishlist_product_ids: [],
     cart_id: null,
 

@@ -26,36 +26,42 @@ export default function CustomerSidebar() {
       <SidebarHeader className="border-b border-border-first px-5 py-6">
         <Link href="/" className="space-y-1">
           <h2 className="text-xl font-semibold text-primary">FurniHome</h2>
-
           <p className="text-xs text-text-secondary">Customer Dashboard</p>
         </Link>
       </SidebarHeader>
       <SidebarContent className="px-2 py-3">
         <SidebarGroup>
           <SidebarMenu>
-            {customerSidebarMenu.map(
-              (item: (typeof customerSidebarMenu)[number]) => {
-                const active = pathname === item.href;
+            {customerSidebarMenu.map((item) => {
+              const active =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
 
-                return (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton
-                      render={
-                        <Link
-                          href={item.href}
-                          className="flex items-center gap-2"
-                        >
-                          <item.icon className="h-5 w-5" />
-                          <span>{item.title}</span>
-                        </Link>
-                      }
-                      isActive={active}
-                      className="h-11 rounded-lg data-[active=true]:bg-surface data-[active=true]:text-primary"
-                    />
-                  </SidebarMenuItem>
-                );
-              },
-            )}
+              return (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    render={
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-3"
+                      >
+                        <item.icon className="h-5 w-5" />
+                        <span>{item.title}</span>
+                      </Link>
+                    }
+                    isActive={active}
+                    className="
+                h-11 rounded-lg transition-colors
+
+                hover:bg-surface hover:text-primary
+
+                data-[active=true]:bg-primary
+                data-[active=true]:text-on-primary
+                data-[active=true]:font-medium
+              "
+                  />
+                </SidebarMenuItem>
+              );
+            })}
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
